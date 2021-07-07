@@ -1,12 +1,11 @@
 #include <iostream>
 #include <string>
 #include <random>
-#include <format>
 
 int main(int argc,char** argv){
 
     if(argc != 2){
-        std::cerr << "Usage: onetrack quizAmount" << std::endl;
+        std::cerr << "Usage: OneTrack quizAmount" << std::endl;
     }else{
 
         //乱数の生成に必要なものを用意する       
@@ -18,8 +17,7 @@ int main(int argc,char** argv){
         std::string text;
 
         for(int i = 0; i < amountQuiz; i++){
-            text = std::format("1件: {}バイトのブロックか因数: 10 で10万件のデータを\n記録するのに必要なシリンダ数は？",dist(engine));
-            std::cout << "問題: " << i+1 << "\n\n" << text << "\n\n";
+            std::cout << "\n\n問題: " << i+1 << "\n\n" << "1件: " << dist(engine) << "バイトのブロックか因数: 10 で10万件のデータを\n記録するのに必要なシリンダ数は？" << std::endl;
         }
     }
 
